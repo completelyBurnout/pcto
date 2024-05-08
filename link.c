@@ -18,12 +18,64 @@ int main()
     else if(risposta == 'a')
     {
         printf("'ottima scelta.' mormora sogghignando. qualcosa ti fa pensare che se avessi rifiutato la scelta di questa stramba figura qualcosa veramente di pessimo sarebbe accaduto.\nMa ormai, dopo tutti questi anni spesi a vagare per le città con la speranza di riuscire a guadagnare abbastanza per sopravvivere, sei disposto a fare di tutto pur di ricevere qualche soldo.\n");
-
+        printf("'qual'è il tuo nome, mio caro viaggiatore?1");
        char nomeutente[50];
        scanf("%s", nomeutente);
        
        scanf("%[^n]s", nomeutente); 
        printf("chiamami %[^ns]", nomeutente);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
 }
