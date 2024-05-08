@@ -1,1 +1,11 @@
 https://prod.liveshare.vsengsaas.visualstudio.com/join?D60D2716DE5C1C901E2AF915CA7F199D8D36ciatr
+
+#include <stdio.h>
+
+int main()
+{
+    printf("PROVA TITOLOOO\n");
+    printf("sjf boh inizio storia?");
+    printf("");
+
+}

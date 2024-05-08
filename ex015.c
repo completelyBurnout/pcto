@@ -18,5 +18,5 @@ int main ()
     scanf("%s", nomeutente);
     scanf("%c", &nomeutente[5]);
 
-    scanf(%[^n]s");
+    //scanf(%[^n]s");
 }
