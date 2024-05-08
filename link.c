@@ -62,7 +62,17 @@ int main()
                                 printf("Daje! hai disattivato l'allarme e la porta si apre da sola.\n");
                                 printf("entri e ce sta n'artro corridoio. sta volta però le porte sono 2.\n");
                                 printf("quale provi ad aprire? a. quella gialla\nb. quella rossa\n");
+                                scanf("%c", risposta11);
 
+                                if (risposta11 == 'a')
+                                {
+                                    printf("la porta esplodi e rip rip muori.");
+                                }
+                                else if(risposta11 == 'b')
+                                {
+                                    printf("entri nel corridoio.");
+                                    return risposta5;
+                                }
                             }
                         }
                     else if(risposta9 == 'c')
