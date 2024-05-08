@@ -23,11 +23,59 @@ int main()
     //INSERISCI ROBA NOME
 
             printf("roba roba roba arriva casa");
-            printf("scegli se a. giro casa o b. attaccare guardie");
+            printf("scegli se a. giro casa o b. vai da guardie");
             scanf("%c", &risposta2);
-
+            char risposta1;
 
             if(risposta2 == 'a')
+            {
+                
+                 if(risposta1=='b') //continua
+                    {
+                        printf("hai deciso di non avventurarti attorno all'edificio. ora devi decidere la sreategia contro le guardie:\n a) sono nemici: devi ucciderli o evitarli, non puoi avere un dialogo con loro\n b)due contro uno non è possiile, sono armati e più forti; decidi di fingerti uno di loro ed entrare così.\n");
+                        char risposta2;
+                        scanf("%c", &risposta2);
+           
+                        if (risposta2=='b') //muori
+                            {
+                                printf("Le guardie non ti riconoscono, sanno che non fai parte della loro banda e che gli stai mentendo. Ti uccidono.");
+                            }
+
+                        else if (risposta2=='a') //continua
+                            {
+                                printf("hai bisogno di un'altra strategia:\n a) attaccali: hai un coltello, con l'effetto sorpresa ce la puoi fare\n b) non puoi sconfiggerli: li distrai lanciando dei sassi lontano per fare rumore");
+                                    char risposta3;
+                                scanf("%c", &risposta3);
+
+                                    if (risposta3=='a') //muori
+                                        {
+                                            printf("hai fatto male i calcoli: sono molto piu forti di te. uno di loro ti squarcia la gola con un coltello.");
+                                        }
+
+                                    else if(risposta3=='b') //continua
+                                        {  
+                                            printf("Le guardie, sentendo i rumori, si allontanano e tu puoi entrare indisturbato. Ora sei in un ingresso a pianta quadrata e, su ogni muro davanti a te, c'è una porta: a sinistra verde, davanti rossa e a destra viola.\n Su ogni porta è disegnata una fiamma. Chissà, forse è un indizio? del resto, anche il tizio misterioso ti aveva parlato di fuoco e tutto questo sembra essere una trappola.\nDevi scegliere una porta, ma con attenzione: potrebbe esserci un allarme o qualche trucco letale.\nScegli una porta, con attenzione:\na)verde\nb)rossa\nc)viola\n");
+                                            char risposta4;
+                                            scanf("%c", &risposta4);
+
+                                            if(risposta4=='a')//muori
+                                                {
+                                                    printf("suona una rumorosa allarme: una dozzina di uomini armati arriva dalla porta d'ingresso e da quella rossa e ti uccide");
+                                                }
+                                            else if(risposta4=='c')//muori
+                                                {
+                                                    printf("la porta ti esplode interamente addosso e muori");
+                                                }
+                                            else if(risposta4=='b')
+                                                {
+                                                printf("l");
+                                                }
+                                        }
+                            } 
+
+                    }
+            
+            else if(risposta2 == 'a')
                 {
                     char risposta9;
                     printf("analizzi i dintorni della casa con prudenza noti finestra raggiungibile tramite ramo, ma chiusa con serratura, e dopo ecc trovi materiali. il resistente filo di ferro, vicino ad una rotta tubatura, un martello dentro un cespuglio, ed il coltello personale.");
@@ -38,7 +86,7 @@ int main()
                     if(risposta9 == 'a')
                         {
                             printf("provi ad usare coltello ma non funziona.");
-                            return risposta9;
+                            return;
                         }
 
                     else if(risposta9 == 'b')
@@ -82,7 +130,8 @@ int main()
 
                 }
                 
+            }
+
+
         }
-
-
 }
