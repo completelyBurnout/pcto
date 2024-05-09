@@ -17,19 +17,18 @@ int main()
    
     else if(risposta == 'a')
         {
-            char risposta2;
+            char risposta2[2];
             printf("'ottima scelta.' mormora sogghignando. qualcosa ti fa pensare che se avessi rifiutato la scelta di questa stramba figura qualcosa veramente di pessimo sarebbe accaduto.\nMa ormai, dopo tutti questi anni spesi a vagare per le città con la speranza di riuscire a guadagnare abbastanza per sopravvivere, sei disposto a fare di tutto pur di ricevere qualche soldo.\n");
-            printf("'qual'è il tuo nome, mio caro viaggiatore?");
-    //INSERISCI ROBA NOME
+            printf("'qual'è il tuo nome, mio caro viaggiatore?\n");
 
-            printf("roba roba roba arriva casa");
-            printf("scegli se a. giro casa o b. vai da guardie");
-            scanf("%c", &risposta2);
-            char risposta1;
+            printf("roba roba roba arriva casa\n");
+            printf("scegli se a. giro casa o b. vai da guardie\n");
+            scanf("%c", risposta2);
+            
 
             if(risposta2 == 'a')
             {
-                
+                char risposta1;
                  if(risposta1=='b') //continua
                     {
                         printf("hai deciso di non avventurarti attorno all'edificio. ora devi decidere la sreategia contro le guardie:\n a) sono nemici: devi ucciderli o evitarli, non puoi avere un dialogo con loro\n b)due contro uno non è possiile, sono armati e più forti; decidi di fingerti uno di loro ed entrare così.\n");
@@ -38,7 +37,7 @@ int main()
            
                         if (risposta2=='b') //muori
                             {
-                                printf("Le guardie non ti riconoscono, sanno che non fai parte della loro banda e che gli stai mentendo. Ti uccidono.");
+                                printf("Le guardie non ti riconoscono, sanno che non fai parte della loro banda e che gli stai mentendo.\n Ti uccidono.\n");
                             }
 
                         else if (risposta2=='a') //continua
@@ -49,7 +48,7 @@ int main()
 
                                     if (risposta3=='a') //muori
                                         {
-                                            printf("hai fatto male i calcoli: sono molto piu forti di te. uno di loro ti squarcia la gola con un coltello.");
+                                            printf("hai fatto male i calcoli: sono molto piu forti di te. uno di loro ti squarcia la gola con un coltello.\n");
                                         }
 
                                     else if(risposta3=='b') //continua
@@ -60,7 +59,7 @@ int main()
 
                                             if(risposta4=='a')//muori
                                                 {
-                                                    printf("suona una rumorosa allarme: una dozzina di uomini armati arriva dalla porta d'ingresso e da quella rossa e ti uccide");
+                                                    printf("suona una rumorosa allarme:\n una dozzina di uomini armati arriva dalla porta d'ingresso e da quella rossa e ti uccide");
                                                 }
                                             else if(risposta4=='c')//muori
                                                 {
@@ -75,7 +74,7 @@ int main()
 
                     }
             
-            else if(risposta2 == 'a')
+            else if(risposta == 'a')
                 {
                     char risposta9;
                     printf("analizzi i dintorni della casa con prudenza noti finestra raggiungibile tramite ramo, ma chiusa con serratura, e dopo ecc trovi materiali. il resistente filo di ferro, vicino ad una rotta tubatura, un martello dentro un cespuglio, ed il coltello personale.");
