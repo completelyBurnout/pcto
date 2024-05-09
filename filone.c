@@ -161,6 +161,10 @@ int main()
                             }
                         }
                     }
+
+                }
+
+        }
                 else if(risposta12 == 'b') //giro casa
                 {
                 printf("\n\nanalizzi i dintorni della casa con prudenza e noti una finestra raggiungibile tramite un ramo, ma chiusa tramite una serratura, e dopo aver cercato in giro trovi materiali.\n\n un resistente filo di ferro, vicino ad una rotta tubatura, un martello dentro un cespuglio, ed il tuo coltello personale.\n\n");
@@ -212,6 +216,6 @@ int main()
                         }
                     }
             }
-        }
+        
    }
 }  
