@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 
@@ -57,7 +58,7 @@ int main() {
     scanf("%s", data_nascita);
 
     // Richiesta della zona di residenza
-    printf("\nProvincia di residenza*:\n\na)Roma (RM)\nb)Frosinone ()\nc) latina ()\nd)Viterbo ()\ne)Milano ()\nf)Firenze ()\ng)Siena ()\n\n*queste sono le uniche provincie nelle quali risiedono le aziende che promuoviamo.\n\n");
+    printf("\nProvincia di residenza:\n\na)Roma (RM)\nb)Frosinone ()\nc) latina ()\nd)Viterbo ()\ne)Milano ()\nf)Firenze ()\ng)Siena ()\n\n*queste sono le uniche provincie nelle quali risiedono le aziende che promuoviamo.\n\n");
     scanf("%c", &zona);
 
     // Richiesta del livello di istruzione ricevuta con controllo

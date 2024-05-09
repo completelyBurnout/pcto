@@ -22,7 +22,7 @@ printf("la tua età:\n\n");
 scanf("%d", &eta);
 printf("anni\n\n");
 
-printf("includi la tua zona (provincia):\n\na)Roma (RM)\nb)Frosinone ()\nc) latina ()\n")
+printf("includi la tua zona (provincia):\n\na)Roma (RM)\nb)Frosinone ()\nc) latina ()\n");
 
 
     
