@@ -65,15 +65,18 @@ int main()
     scanf(" %s", data_nascita);
 
     // Richiesta della zona di residenza
-    printf("\nProvincia di residenza:\n\na)Roma (RM)\nb)Frosinone (FR)\nc) latina (LT)\nd)Viterbo (VT)\ne)Milano (MI)\nf)Firenze (FI)\ng)Siena (SI)\n\n*queste sono le uniche provincie nelle quali risiedono le aziende che promuoviamo.\n\n");
-    scanf("   %c", &zona);
-    if ((zona=='a') || (zona=='b') || (zona=='c') || (zona=='d') || (zona=='e') || (zona=='f') || (zona=='g'))
+    While(1)
     {
-        goto livistruzione;
-    }
-    else
-    {
-        printf("provincia errata. riprovare.");
+        printf("\nProvincia di residenza:\n\na)Roma (RM)\nb)Frosinone (FR)\nc) latina (LT)\nd)Viterbo (VT)\ne)Milano (MI)\nf)Firenze (FI)\ng)Siena (SI)\n\n*queste sono le uniche provincie nelle quali risiedono le aziende che promuoviamo.\n\n");
+        scanf("   %c", &zona);
+        if ((zona=='a') || (zona=='b') || (zona=='c') || (zona=='d') || (zona=='e') || (zona=='f') || (zona=='g'))
+        {
+            goto livistruzione;
+        }
+        else
+        {
+            printf("provincia errata. riprovare.");
+        }
     }
 
     // Richiesta del livello di istruzione ricevuta con controllo
@@ -103,30 +106,31 @@ int main()
             }
         }
         
-        else 
+        else
         {
             printf("Inserisci un livello di istruzione valido.\n");
         }
+    }
         
 
         
 
             // Richiesta di ulteriore istruzione con controllo
 
-        while(1)
+    while(1)
+    {
+        istruzioneult:
+        printf("Interessato a ulteriore istruzione? (Si/No): ");
+        scanf("  %s", ulteriore_istruzione);
+        if (strcmp(ulteriore_istruzione,"Si" )== 0 || strcmp(ulteriore_istruzione,"No" ) == 0)
         {
-            istruzioneult:
-            printf("Interessato a ulteriore istruzione? (Si/No): ");
-            scanf("  %s", ulteriore_istruzione);
-            if (strcmp(ulteriore_istruzione,"Si" )== 0 || strcmp(ulteriore_istruzione,"No" ) == 0)
-            {
-                break;
-            }
-            else
-            {
-                printf("Risposta non valida. Inserisci 'Si' o 'No'.\n");
-            }
+            break;
         }
+        else
+        {
+            printf("Risposta non valida. Inserisci 'Si' o 'No'.\n");
+        }
+    }
 
         // Richiesta degli interessi lavorativi
         printf("Interessi lavorativi: ");

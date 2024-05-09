@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 
@@ -19,6 +18,8 @@ int main()
     char azienda2;
     char azienda3;
     char azienda4;
+    char certif;
+    char ingl[3];
 
     // Intestazione
     printf("Benvenuto! Per favore, inserisci le informazioni richieste:\n");
@@ -83,7 +84,7 @@ int main()
     {
         livistruzione:
         printf("Livello di istruzione ricevuta:\na) Scuola superiore\nb) Laurea triennale\nc) Laurea magistrale\nd) Master\ne) Dottorato\nf) specializzazione\ng) Scuola Professionale\nh) Nessuna di queste:\n");
-        scanf(" %c", &istruzione);
+        scanf(" %c", &certif);
         if ((istruzione=='b') || (istruzione=='c') || (istruzione=='d') || (istruzione=='e') || (istruzione=='f')  || (istruzione=='g'))
         {
             if((istruzione=='b') || (istruzione=='c') || (istruzione, "d") || (istruzione, "e") || (istruzione, "f"))
@@ -109,7 +110,7 @@ int main()
         {
             printf("Inserisci un livello di istruzione valido.\n");
         }
-        
+    }
 
         
 
@@ -129,6 +130,30 @@ int main()
                 printf("Risposta non valida. Inserisci 'Si' o 'No'.\n");
             }
         }
+
+    while(1)//CERTIFICAZIONI INGLESE
+    {
+        printf("Hai una certificazione di lingua inglese? (Si/No): ");
+        scanf("  %s", ingl);
+        if (strcmp(ingl,"Si" )== 0)
+        {
+            printf("quale?\n\na)Cambridge English: Proficiency (CPE)\nb)Cambridge English: Advanced (CAE)\nc)Cambridge English: First (FCE)\nd)Cambridge English: Preliminary (PET)\ne)Cambridge English: Key (KET)\nf)Certified Business English (BEC)\ng)IELTS (International English Language Testing System)\nh)TOEFL (Test of English as a Foreign Language)\ni)TOEIC (Test of English for International Communication)\nj)PTE Academic (Pearson Test of English Academic)\nk)Michigan English Language Assessment Battery (MELAB)\nl)Trinity College London Certificates\nm)ACTFL (American Council on the Teaching of Foreign Languages) OPIc (Oral Proficiency Interview)\nn)SAT (Scholastic Aptitude Test e Scholastic Assessment Test)\no)A1\np)A2\nq)B1\nr)B2\ns)C1\nt)C2\n\n");
+            scanf(" %c", &certif);
+
+            break;
+        }
+        else if(strcmp(ingl,"No" ) == 0)
+        {
+            break;
+        }
+        else
+        {
+            printf("Risposta non valida. Inserisci 'Si' o 'No'.\n");
+        }
+    }
+
+
+       
 
         // Richiesta degli interessi lavorativi
         printf("Interessi lavorativi: ");
@@ -178,9 +203,17 @@ int main()
         {
             printf("Siamo spiacenti, ma non abbiamo trovato risultati per te.");
         }
-        break;
 
+
+    
+    if(strcmp(ingl,"No" ) == 0)
+    {
+        printf("hai bisogno di sapere qual è il tuo livello di inglese e vuoi eventualmente migliorare? Facendo questo test, potrai capire quale corso dovrai seguire.");
+        
     }
+        
+
+    
 
     
 }
