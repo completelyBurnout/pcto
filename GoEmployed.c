@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include <string.h>
 
 
 int main() 
@@ -10,7 +11,7 @@ int main()
     int eta;
     char data_nascita[20];
     char zona;
-    char istruzione[50];
+    char istruzione;
     char ulteriore_istruzione[30];
     char interessi_lavorativi[200];
     char laurea;
@@ -65,7 +66,7 @@ int main()
 
     // Richiesta della zona di residenza
     printf("\nProvincia di residenza:\n\na)Roma (RM)\nb)Frosinone (FR)\nc) latina (LT)\nd)Viterbo (VT)\ne)Milano (MI)\nf)Firenze (FI)\ng)Siena (SI)\n\n*queste sono le uniche provincie nelle quali risiedono le aziende che promuoviamo.\n\n");
-    scanf(" %c", &zona);
+    scanf("   %c", &zona);
     if ((zona=='a') || (zona=='b') || (zona=='c') || (zona=='d') || (zona=='e') || (zona=='f') || (zona=='g'))
     {
         goto livistruzione;
@@ -79,37 +80,45 @@ int main()
     while(1)
     {
         livistruzione:
-        printf("Livello di istruzione ricevuta:\nScuola superiore\nLaurea triennale\nLaurea magistrale\nMaster\nDottorato\nspecializzazione\nScuola Professionale\nNessuna di queste):\n");
-        scanf(" %[^\n]s", istruzione);
-        if ((istruzione, "Laurea triennale") || (istruzione, "Specizlizzazione") || (istruzione, "Scuola superiore") || (istruzione, "Laurea magistrale") || (istruzione, "Master")  || (istruzione, "Dottorato") || ("Scuola Professionale") || ("Nessuna di queste"))
+        printf("Livello di istruzione ricevuta:\na) Scuola superiore\nb) Laurea triennale\nc) Laurea magistrale\nd) Master\ne) Dottorato\nf) specializzazione\ng) Scuola Professionale\nh) Nessuna di queste:\n");
+        scanf(" %c", &istruzione);
+        if ((istruzione=='b') || (istruzione=='c') || (istruzione=='d') || (istruzione=='e') || (istruzione=='f')  || (istruzione=='g'))
         {
-            if((istruzione=='Laura triennale') || (istruzione=='Laurea Magistrale') || (istruzione, "Specizlizzazione") || (istruzione, "Master") || (istruzione, "Dottorato"))
+            if((istruzione=='b') || (istruzione=='c') || (istruzione, "d") || (istruzione, "e") || (istruzione, "f"))
             {
                 printf("\nseleziona ambito laurea:\n\na)Economia e Commercio\nb)Giurisprudenza\nc)Ingegneria\nd)Scienze della Comunicazione\ne)Scienze della Formazione\nf)Scienze dell'Educazione\ng)Scienze dell'Economia\nh)Scienze della Salute\ni)Scienze Matematiche\nj)Scienze Naturali\nk)Scienze Psicologiche\nl)Scienze Sociali\nm)Biologia\nn)Chimica\no)Fisica\np)Informatica\nq)Lingue e Culture Straniere\nr)Medicina\ns)Architettura\nt)Agraria\nu)Scienze del Turismo\nv)Scienze dei Beni Culturali\nw)Scienze Motorie\nx)Scienze Gastronomiche\ny)Scienze Politiche\n\n");
                 scanf(" %c", &laurea);
-                if ((laurea=='e') || (laurea=='f') || (laurea=='h') || (laurea=='j') || (laurea=='k') || (laurea=='n') || (laurea=='q') || (laurea=='s') || (laurea=='t') || (laurea=='u') || (laurea=='v') || (laurea=='w') || (laurea=='x'));
+                if ((laurea=='e') || (laurea=='f') || (laurea=='h') || (laurea=='j') || (laurea=='k') || (laurea=='n') || (laurea=='q') || (laurea=='s') || (laurea=='t') || (laurea=='u') || (laurea=='v') || (laurea=='w') || (laurea=='x'))
                 {
                     printf("\n\nPurtroppo al momento non sono disponibili lavori che richiedono le tue competenze accademiche.\n Prova di nuovo in un'altro momento.\n");
                     break;
                 }
+                else
+                {
+                    printf(" \n\n\n");
+                    goto istruzioneult;
+                }
+
                 
             }
-        
-            else 
-            {
-                printf("Inserisci un livello di istruzione valido.\n");
-            }
         }
+        
+        else 
+        {
+            printf("Inserisci un livello di istruzione valido.\n");
+        }
+        
 
         
 
             // Richiesta di ulteriore istruzione con controllo
+
         while(1)
         {
             istruzioneult:
             printf("Interessato a ulteriore istruzione? (Si/No): ");
-            scanf(" %s", ulteriore_istruzione);
-            if ((ulteriore_istruzione, "Si" && "si") == 0 || (ulteriore_istruzione, "No" && "no") == 0)
+            scanf("  %s", ulteriore_istruzione);
+            if (strcmp(ulteriore_istruzione,"Si" )== 0 || strcmp(ulteriore_istruzione,"No" ) == 0)
             {
                 break;
             }
@@ -124,32 +133,32 @@ int main()
         scanf(" %s", interessi_lavorativi);
 
         // Profilo dell'utenteb
-        printf("\n\n-- Profilo Utente --\n");
-        printf("Nome: %s %s\n", nome, cognome);
-        printf("Genere: %s\n", genere);
-        printf("Età: %d\n", eta);
-        printf("Data di nascita: %s\n", data_nascita);
-        printf("Zona di residenza: %c\n", zona);
-        printf("Livello di istruzione: %s\n", istruzione);
-        printf("Ulteriore istruzione: %s\n", ulteriore_istruzione);
-        printf("Interessi lavorativi: %s\n", interessi_lavorativi);
+        //printf("\n\n-- Profilo Utente --\n");
+        //printf("Nome: %s %s\n", nome, cognome);
+        //printf("Genere: %s\n", genere);
+        //printf("Età: %d\n", eta);
+        //printf("Data di nascita: %s\n", data_nascita);
+        //printf("Zona di residenza:  %c\n", zona);
+        //printf("Livello di istruzione:  %c\n", istruzione);
+        //printf("Ulteriore istruzione: %s\n", ulteriore_istruzione);
+        //printf("Interessi lavorativi: %s\n", interessi_lavorativi);
 
         printf("\n\nIl lavoro che abbiamo trovato per te è il seguente:\n\n");
 
-        if ((eta>=18) && (zona=='a' || zona=='c' || zona=='e') && (istruzione=='Laurea triennale' || istruzione=='Specializzazione' || istruzione=='Laurea magistrale' || istruzione=='Master' || istruzione=='Dottorato' || istruzione=='Scuola Professionale') && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='p'))
+        if ((eta>=18) && (zona=='a' || zona=='c' || zona=='e') && ((istruzione=='b') || (istruzione=='c') || (istruzione=='d') || (istruzione=='e') || (istruzione=='f')  || (istruzione=='g')) && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='p'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 1, specializzata nella tecnologia e l'uso di computer.");
         }
         
-        else if ((eta>=18) && (zona=='a' || zona=='d' || zona=='e' || zona=='f') && (istruzione=='Laurea triennale' || istruzione=='Specializzazione' || istruzione=='Laurea magistrale' || istruzione=='Master' || istruzione=='Dottorato') && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='l'||laurea=='o'))
+        else if ((eta>=18) && (zona=='a' || zona=='d' || zona=='e' || zona=='f') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='l'||laurea=='o'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 2, specializzata nella tecnologia e vendita di radar per aerei.");
         }
-        else if ((eta>=18) && (zona=='a' || zona=='b' || zona=='e') && (istruzione=='Laurea triennale' || istruzione=='Specializzazione' || istruzione=='Laurea magistrale' || istruzione=='Master' || istruzione=='Dottorato') && (laurea=='b'||laurea=='d'||laurea=='l'||laurea=='y'))
+        else if ((eta>=18) && (zona=='a' || zona=='b' || zona=='e') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='b'||laurea=='d'||laurea=='l'||laurea=='y'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 3, specializzata nel campo legislativo e politico.");
         }
-        else if ((eta>=18) && (zona=='a' || zona=='f' || zona=='e'||zona=='g') && (istruzione=='Laurea triennale' || istruzione=='Specializzazione' || istruzione=='Laurea magistrale' || istruzione=='Master' || istruzione=='Dottorato') && (laurea=='r'||laurea=='m'))
+        else if ((eta>=18) && (zona=='a' || zona=='f' || zona=='e'||zona=='g') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='r'||laurea=='m'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 4, specializzata nell'ambiente medico sperimentale.");
         }
@@ -167,7 +176,7 @@ int main()
         {
             printf("Siamo spiacenti, ma non abbiamo trovato risultati per te.");
         }
-        
+        break;
 
     }
 }
