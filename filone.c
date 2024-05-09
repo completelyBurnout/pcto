@@ -15,7 +15,7 @@ int main()
     char risposta10;
     char risposta11;
     char risposta12;
-
+    char nomeutente[40];
 
 
 
@@ -34,10 +34,13 @@ int main()
     {
         printf("\n'ottima scelta.' mormora sogghignando. qualcosa ti fa pensare che se avessi rifiutato la scelta di questa stramba figura qualcosa veramente di pessimo sarebbe accaduto.\nMa ormai, dopo tutti questi anni spesi a vagare per le città con la speranza di riuscire a guadagnare abbastanza per sopravvivere, sei disposto a fare di tutto pur di ricevere qualche soldo.\n");
         printf("'qual'è il tuo nome, mio caro viaggiatore?\n");
+        scanf(" %[^\n]s", nomeutente);
+        printf("'chiamami %s'", nomeutente);
+        printf("\n\nBene, %s. Ora inizia la tua missione. Per avere i 100.000 settentri d'oro dovrai addentrarti per i vicoli di Harkins e trovare un edificio rosso affiancato da una foresta. Ricordati, il fuoco è un tuo alleato.'\n\nDopo aver detto ciò l'individuo sparisce tra la folla.\n\n");
 
         //ER NOME
 
-        printf("\nti inoltri quindi tra gli oscuri vicoli della città portuale ed arrivi al luogo indicato.\n\nè un edificio abbastanza nascosto, apparentemente abbandonato, dalle mura rosso cremisi circondato da una fitta foresta. Fai attenzione a i tuoi dintorni cercando di non venire scoperto da eventuali nemici. Scorgi la porta principale: è controllata da due guardie armate.\n");
+        printf("\n\nti inoltri quindi tra gli oscuri vicoli della città portuale ed arrivi al luogo indicato.\n\nè un edificio abbastanza nascosto, apparentemente abbandonato, dalle mura rosso cremisi circondato da una fitta foresta. Fai attenzione a i tuoi dintorni cercando di non venire scoperto da eventuali nemici.\n\n Scorgi la porta principale:\n è controllata da due guardie armate.\n\n");
         printf("scegli se\n\n a. approcci le guardie.\nb. provi a girare intorno alla casa per cercare un'entrata non sorvegliata.\n\n");
         scanf(" %c", &risposta12);
 
