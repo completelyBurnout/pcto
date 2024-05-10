@@ -124,12 +124,12 @@ int main()
         istruzioneult:
         printf("Interessato a ulteriore istruzione? (Si/No): ");
         scanf("  %s", ulteriore_istruzione);
-        if (strcmp(ulteriore_istruzione,"Si" )== 0 || strcmp(ulteriore_istruzione,"si" )== 0)
+        if (strcmp(ulteriore_istruzione,"Si" )== 0)
         {
             printf("contattaci inviando una mail all'ndirizzo 'goemployed.istruzione@gmail.com'.\n\n");
             break;
         }
-        else if(strcmp(ulteriore_istruzione,"No" )== 0 || strcmp(ulteriore_istruzione,"no" )== 0)
+        else if(strcmp(ulteriore_istruzione,"No" )== 0)
         {
             break;
         }
@@ -143,14 +143,14 @@ int main()
     {
         printf("Hai una certificazione di lingua inglese? (Si/No): ");
         scanf("  %s", ingl);
-        if (strcmp(ingl,"Si" )== 0 || strcmp(ingl,"si" )== 0)
+        if (strcmp(ingl,"Si" )== 0)
         {
             printf("\nquale?\n\na)Cambridge English: Proficiency (CPE)\nb)Cambridge English: Advanced (CAE)\nc)Cambridge English: First (FCE)\nd)Cambridge English: Preliminary (PET)\ne)Cambridge English: Key (KET)\nf)Certified Business English (BEC)\ng)IELTS (International English Language Testing System)\nh)TOEFL (Test of English as a Foreign Language)\ni)TOEIC (Test of English for International Communication)\nj)PTE Academic (Pearson Test of English Academic)\nk)Michigan English Language Assessment Battery (MELAB)\nl)Trinity College London Certificates\nm)ACTFL (American Council on the Teaching of Foreign Languages) OPIc (Oral Proficiency Interview)\nn)SAT (Scholastic Aptitude Test e Scholastic Assessment Test)\no)A1\np)A2\nq)B1\nr)B2\ns)C1\nt)C2\n\n");
             scanf(" %c", &certif);
 
             break;
         }
-        else if(strcmp(ingl,"No" ) == 0 || strcmp(ingl,"no" )== 0)
+        else if(strcmp(ingl,"No" ) == 0)
         {
             break;
         }
@@ -180,26 +180,27 @@ int main()
 
         printf("\n\nIl lavoro che abbiamo trovato per te è il seguente:\n\n");
 
-        if ((eta>=18) && (zona=='a' || zona=='c' || zona=='e') && ((istruzione=='b') || (istruzione=='c') || (istruzione=='d') || (istruzione=='e') || (istruzione=='f')  || (istruzione=='g')) && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='p') && ((!certif=='o') || (!certif=='e') || (!certif=='o')))
+        if ((eta>=18) && (zona=='a' || zona=='c' || zona=='e') && ((istruzione=='b') || (istruzione=='c') || (istruzione=='d') || (istruzione=='e') || (istruzione=='f')  || (istruzione=='g')) && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='p') && (!certif=='o' || !certif=='e' || !certif=='o'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 1, specializzata nella tecnologia e l'uso di computer.\n\nOppure, un lavoro part time: lavoratore ad Alice Pizza.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\n");
         }
         
-        else if ((eta>=18) && (zona=='a' || zona=='d' || zona=='e' || zona=='f') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='l'||laurea=='o') && ((!certif=='o') || (!certif=='e') || (!certif=='o')))
+        else if ((eta>=18) && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='l'||laurea=='o') && (!certif=='o' || !certif=='e' || !certif=='o'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 2, specializzata nella tecnologia e vendita di radar per aerei.\n\nOppure, un lavoro part time: lavoratore ad Alice Pizza o Rosso Pomodoro.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\n");
         }
-        else if ((eta>=18) && (zona=='a' || zona=='b' || zona=='e') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='b'||laurea=='d'||laurea=='l'||laurea=='y') && ((!certif=='o') || (!certif=='e') || (!certif=='o')))
+        else if ((eta>=18) && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='b'||laurea=='d'||laurea=='l'||laurea=='y') && (!certif=='o' || !certif=='e' || !certif=='o'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 3, specializzata nel campo legislativo e politico.\n\nOppure, un lavoro part time: lavoratore ad Alice Pizza.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\n");
         }
-        else if ((eta>=18) && (zona=='a' || zona=='f' || zona=='e'||zona=='g') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='r'||laurea=='m') && (!certif=='o'))
+        else if ((eta>=18) && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='r'||laurea=='m') && (!certif=='o'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 4, specializzata nell'ambiente medico sperimentale.\n\nOppure, un lavoro part time: lavoratore ad Alice Pizza o Rosso Pomodoro.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\n");
         }
+        
         else
         {
-            if ((eta>=16) && (zona=='d'|| zona=='a' || zona=='f' || zona=='e'||zona=='g'))//rosso pomodoro
+            if (eta>=16)//rosso pomodoro
             {
                 printf("basandoci su i tuoi risultati, ciò che più si addice a te è un lavoro part time: lavoratore a Rosso Pomodoro oppure Alice Pizza.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\n");
             }
