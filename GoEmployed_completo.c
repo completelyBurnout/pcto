@@ -21,6 +21,14 @@ int main()
     char certif;
     char ingl[3];
     char test[3];
+    char answers[20] = {'c', 'b', 'a', 'b', 'c', 'd', 'b', 'd', 'b', 'b', 'b', 'b', 'b', 'a', 'b', 'c', 'a', 'b', 'c', 'b'};
+    char level;
+     char questions[20];
+     int score = 0;
+    int question_num = 0;
+    char user_answer[2];
+    char answer;
+    
 
     // Intestazione
     printf("Benvenuto! Per favore, inserisci le informazioni richieste:\n");
