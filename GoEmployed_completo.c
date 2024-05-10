@@ -223,7 +223,7 @@ int main()
 
 
     test:
-    if(strcmp(ingl,"No" ) == 0)
+    if(strcmp(ingl,"No" ) == 0 || strcmp(ingl,"no" ) == 0)
     {
         printf("hai bisogno di sapere qual è il tuo livello di inglese e vuoi eventualmente migliorare? Facendo questo test, potrai capire quale corso dovrai seguire.");
         while(1)//CERTIFICAZIONI INGLESE
@@ -242,7 +242,7 @@ int main()
                 "4. Quale tempo verbale viene utilizzato per esprimere azioni che sono state completate nel passato?\n a) Present simple\n b) Past simple\n c) Present continuous\n d) Future simple\n",
                 "5. Qual è l’opzione corretta per completare la seguente frase: “I ___ to the cinema last night.”\n a) go\n b) goes\n c) went\n d) going\n",
                 "6. Quale di queste parole non è un avverbio di frequenza?\n a) rarely\n b) always\n c) quickly\n d) happy\n",
-                "7. Qual è la forma comparativa corretta di “good”?\n a) more good\n b) better c) best d) gooder\n",
+                "7. Qual è la forma comparativa corretta di “good”?\n a) more good\n b) better \nc) best \nd) gooder\n",
                 "8. Quale di queste frasi è corretta grammaticalmente?\n a) She doesn’t never go to the gym.\n b) She doesn’t go never to the gym.\n c) She never doesn’t go to the gym.\n d) She never goes to the gym.\n",
                 "9. Qual è il significato di “to hit the nail on the head”?\n a) Fare un errore\n b) Indovinare la soluzione esatta c)\n Essere fortunati\n d) Essere imprecisi",
                 "10. Qual è il significato di “to give someone the benefit of the doubt”?\n a) Non credere a qualcosa\n b) Dare a qualcuno il beneficio del dubbio\n c) Essere sicuri di qualcosa\n d) Non prendere in considerazione l’opinione altrui\n",
@@ -265,13 +265,15 @@ int main()
 
             // Start the quiz
             int question_num = 0;
-            while (question_num < 20) {
+            while (question_num < 20) 
+            {
                 printf("%s", questions[question_num]);
                 char user_answer[2];
                 printf("Your answer: ");
                 scanf("%s", user_answer);
 
-                if (strcmp(user_answer, &answers[question_num]) == 0) {
+                if (strcmp(user_answer, &answers[question_num]) == 0) 
+                {
                     printf("Correct!\n\n");
                     score++;
                 } 
