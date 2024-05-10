@@ -49,7 +49,7 @@ int main()
     // Richiesta dell'età con controllo
     while(1) 
     {
-        printf("Età: ");
+        printf("Età:");
         scanf("%d", &eta);
         if (eta >= 16 && eta <= 100) 
         {
@@ -181,45 +181,38 @@ int main()
 
         printf("\n\nIl lavoro che abbiamo trovato per te è il seguente:\n\n");
 
-        if ((eta>=18) && (zona=='a' || zona=='c' || zona=='e') && ((istruzione=='b') || (istruzione=='c') || (istruzione=='d') || (istruzione=='e') || (istruzione=='f')  || (istruzione=='g')) && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='p') && (!certif=='o' || !certif=='e' || !certif=='o'))
+        if ((eta>=18) && (zona=='a' || zona=='c' || zona=='e') && ((istruzione=='b') || (istruzione=='c') || (istruzione=='d') || (istruzione=='e') || (istruzione=='f')  || (istruzione=='g')) && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='p'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 1, specializzata nella tecnologia e l'uso di computer.\n\nOppure, un lavoro part time: lavoratore ad Alice Pizza.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\nLe altre opzioni sono Azienda 2, Azienda 3 e Azienda 4, ma crediamo che tu non abbia le competenze giuste per essere accettato per il lavoro che offrono.\n\n");
             
         }
         
-        else if ((eta>=18) && (zona=='a' || zona=='d' || zona=='e' || zona=='f') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='l'||laurea=='o') && (!certif=='o' || !certif=='e' || !certif=='o'))
+        else if ((eta>=18) && (zona=='a' || zona=='d' || zona=='e' || zona=='f') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='a'||laurea=='c'||laurea=='d'||laurea=='g'||laurea=='i'||laurea=='l'||laurea=='o'))
         {    
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 2, specializzata nella tecnologia e vendita di radar per aerei.\n\nOppure, un lavoro part time: lavoratore ad Alice Pizza o Rosso Pomodoro.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\nLe altre opzioni sono Azienda 1, Azienda 3 e Azienda 4, ma crediamo che tu non abbia le competenze giuste per essere accettato per il lavoro che offrono.\n\n");
         
         }
-        else if ((eta>=18) && (zona=='a' || zona=='b' || zona=='e') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='b'||laurea=='d'||laurea=='l'||laurea=='y') && (!certif=='o' || !certif=='e' || !certif=='o'))
+        else if ((eta>=18) && (zona=='a' || zona=='b' || zona=='e') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 3, specializzata nel campo legislativo e politico.\n\nOppure, un lavoro part time: lavoratore ad Alice Pizza.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\nLe altre opzioni sono Azienda 2, Azienda 1 e Azienda 4, ma crediamo che tu non abbia le competenze giuste per essere accettato per il lavoro che offrono.\n\n");
             
         }
-        else if ((eta>=18) && (zona=='a' || zona=='f' || zona=='e'||zona=='g') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='r'||laurea=='m') && (!certif=='o'))
+        else if ((eta>=18) && (zona=='a' || zona=='f' || zona=='e'||zona=='g') && (istruzione=='b' || istruzione=='f' || istruzione=='c' || istruzione=='d' || istruzione=='e') && (laurea=='r'||laurea=='m'))
         {
             printf("basandoci su i tuoi risultati, l'azienda che più si addice a te è Azienda 4, specializzata nell'ambiente medico sperimentale.\n\nOppure, un lavoro part time: lavoratore ad Alice Pizza o Rosso Pomodoro.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\nLe altre opzioni sono Azienda 2, Azienda 3 e Azienda 1, ma crediamo che tu non abbia le competenze giuste per essere accettato per il lavoro che offrono.\n\n");
             
         }
-        else
-        {
-            if ((eta>=16) && (zona=='d'|| zona=='a' || zona=='f' || zona=='e'||zona=='g'))//rosso pomodoro
+        
+        else if((eta>15 && eta<18) && (zona=='d'|| zona=='a' || zona=='f' || zona=='e'||zona=='g'))//rosso pomodoro
             {
                 printf("basandoci su i tuoi risultati, ciò che più si addice a te è un lavoro part time: lavoratore a Rosso Pomodoro oppure Alice Pizza.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\nLe altre opzioni sono Azienda 1, Azienda 2, Azienda 3 e Azienda 4, ma crediamo che tu non abbia le competenze giuste per essere accettato per il lavoro che offrono.\n\n");
-                
-            }
-            else if (eta>=16)//alice pizza
+            }   
+        else
             {
-                printf("basandoci su i tuoi risultati, ciò che più si addice a te è un lavoro part time: lavoratore ad Alice Pizza.\n\nPer maggiori informazioni e chiedere un colloqio, contattaci all'indirizzo e-mail 'goemployed.colloqui@gmail.com'.\n\nLe altre opzioni sono Azienda 1, Azienda 2, Azienda 3 e Azienda 4, ma crediamo che tu non abbia le competenze giuste per essere accettato per il lavoro che offrono. Inoltre, non risiedi in una provincia compresa tra quelle di Rosso Pomodoro.\n\n");
-                
+                printf("Siamo spiacenti, ma non abbiamo trovato risultati per te.\n\n");
+        
             }
-            else
-            {
-            printf("Siamo spiacenti, ma non abbiamo trovato risultati per te.\n\n");
-            
-            }
-        }
+        
 
 
     
